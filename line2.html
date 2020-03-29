@@ -33,7 +33,8 @@ function kirikae(x){
   text=document.getElementById('text'+i).innerHTML;
   copyTextToClipboard(text);
   
-  document.getElementById('counter').innerHTML=i;
+  //document.getElementById('counter').innerHTML=i;
+  document.title=i;
   
 }
 
@@ -69,7 +70,9 @@ function copyTextToClipboard(textVal){
 <p id="counter">0</p>
 
 <div id="line">
+<!--
 <span id="text0" style="display:none;">text0</span>
+-->
 <div id="word0" style="display:none;">
 </div>
 
