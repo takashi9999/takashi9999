@@ -9,7 +9,7 @@
     <script type="text/javascript">
 <!--
 
-  var count = 100;
+  var count = 238;
   var countend=1000;
   var countup = function(){
     
@@ -32,6 +32,8 @@ function kirikae(x){
   document.getElementById('word'+i).style.display="block";
   text=document.getElementById('text'+i).innerHTML;
   copyTextToClipboard(text);
+  
+  document.getElementById('counter').innerHTML=i;
   
 }
 
@@ -64,6 +66,7 @@ function copyTextToClipboard(textVal){
 </head>
 
 <body>
+<p id="counter">0</p>
 <span id="text0" style="display:none;">text0</span>
 <div id="word0" style="display:none;">
 </div>
