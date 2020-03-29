@@ -4,11 +4,14 @@
 
 body {
     margin: 0;
+
+    background: #7993BE;
+    width:1000px;
+}
+#line{
     padding: 100px 20px;
     font-family: sans-serif;
     font-size:40px;
-    background: #7993BE;
-    width:1000px;
 }
 
 .img-icon {
