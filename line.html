@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>切り替えるやつ</title>
+    <link rel="stylesheet" href="css/line.css">
+
+    <script type="text/javascript">
+<!--
+
+  var count = 2;
+  var countup = function(){
+    
+    kirikae(count);
+    count++;
+  }
+  var id = setInterval(function(){
+    countup();
+    if(count > 5){　
+      clearInterval(id);　//idをclearIntervalで指定している
+    }}, 5000);
+
+
+function kirikae(x){
+  var word="word";
+  var copy="input_copy";
+  var i=x;
+  document.getElementById(word+i).style.display="block";
+  i--;
+  document.getElementById(word+i).style.display="none";
+  
+  const target = document.getElementById(copy+i);
+    target.select();
+    document.execCommand('copy');
+}
+
+// -->
+
+</script>
+    
+</head>
+
+<body>
+<input type="text" id="input_copy1" value="pen pineapple apple pen" readonly>
+<input type="text" id="input_copy2" value="pen pineapple apple pen" readonly>
+<input type="text" id="input_copy3" value="pen pineapple apple pen" readonly>
+<input type="text" id="input_copy4" value="pen pineapple apple pen" readonly>
+
+<div id="word1" style="display:block;">
+<p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>Did you buy a round trip ticket?</span></p> <p class='prep'><span class='spanrep'>往復切符を買いましたか。</span></p>
+</div>
+
+<div id="word2" style="display:none;">
+<p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>When I returned home, my brother was doing his homework.</span></p> <p class='prep'><span class='spanrep'>私が帰宅したとき、弟は宿題をしているところだった。</span></p>
+</div>
+
+<div id="word3" style="display:none;">
+<p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>He loves her.</span></p> <p class='prep'><span class='spanrep'>彼は彼女が好きだ。</span></p>
+</div>
+
+<div id="word4" style="display:none;">
+<p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>My younger brother is watching TV.</span></p> <p class='prep'><span class='spanrep'>私の弟はテレビを見ている。</span></p>
+</div>
+
+</body>
+</html>
+

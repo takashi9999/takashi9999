@@ -1,0 +1,47 @@
+
+
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 100px 20px;
+    font-family: sans-serif;
+    font-size:40px;
+    background: #7993BE;
+    width:1000px;
+}
+
+.img-icon {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.pokuru {
+    clear: both;
+    background: transparent url("../img/bg.png") no-repeat 110px top;
+    background-size: 40px auto;
+}
+
+.spanokuru {
+    display: inline-block;
+    max-width: 70%;
+    margin-left: 30px;
+    padding: 16px 30px;
+    vertical-align: top;
+    background: #fff;
+    border-radius: 40px;
+}
+
+.prep {
+    text-align: right;
+    
+}
+.spanrep {
+    display: inline-block;
+    max-width: 70%;
+    padding: 16px 30px;
+    vertical-align: top;
+    background: #85ff49;
+    border-radius: 40px;
+    text-align: left;
+}

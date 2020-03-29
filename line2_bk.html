@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>切り替えるやつ</title>
+    <link rel="stylesheet" href="css/line.css">
+
+    <script type="text/javascript">
+<!--
+
+  var count = 0;
+  var countup = function(){
+    
+    kirikae(count);
+    count++;
+  }
+  var id = setInterval(function(){
+    countup();
+    if(count > 5){　
+      clearInterval(id);　//idをclearIntervalで指定している
+    }}, 5000);
+
+
+function kirikae(x){
+  var i=x;
+  var text='';
+
+  document.getElementById('word'+i).style.display="none";
+  i++;
+  document.getElementById('word'+i).style.display="block";
+  text=document.getElementById('text'+i).innerHTML;
+  copyTextToClipboard(text);
+  
+}
+
+function copyTextToClipboard(textVal){
+  // テキストエリアを用意する
+  var copyFrom = document.createElement("textarea");
+  // テキストエリアへ値をセット
+  copyFrom.textContent = textVal;
+ 
+  // bodyタグの要素を取得
+  var bodyElm = document.getElementsByTagName("body")[0];
+  // 子要素にテキストエリアを配置
+  bodyElm.appendChild(copyFrom);
+ 
+  // テキストエリアの値を選択
+  copyFrom.select();
+  // コピーコマンド発行
+  var retVal = document.execCommand('copy');
+  // 追加テキストエリアを削除
+  bodyElm.removeChild(copyFrom);
+  // 処理結果を返却
+  return retVal;
+}
+
+
+// -->
+
+</script>
+    
+</head>
+
+<body>
+<span id="text0" style="display:none;">text0</span>
+<div id="word0" style="display:none;">
+</div>
+
+<div id="word1" style="display:none;">
+<p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>He promised to come, but he didn't come.</span></p> <p class='prep'><span class='spanrep'>彼は来ると約束したが、来なかった。</span></p>
+<span id="text1" style="display:none;">
+text1
+</span>
+</div>
+
+<div id="word2" style="display:none;">
+<p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>I usually wake up at six.</span></p> <p class='prep'><span class='spanrep'>私は普段６時に目が覚める。</span></p>
+<span id="text2" style="display:none;">
+text2
+</span>
+</div>
+
+
+<div id="word3" style="display:none;">
+<p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>He promised to come, but he didn't come.</span></p> <p class='prep'><span class='spanrep'>彼は来ると約束したが、来なかった。</span></p>
+<span id="text3" style="display:none;">
+text3</span>
+</div>
+
+
+<div id="word4" style="display:none;">
+<p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>I usually wake up at six.</span></p> <p class='prep'><span class='spanrep'>私は普段６時に目が覚める。</span></p>
+<span id="text4" style="display:none;">「I usually wake up at six.,」私は普段６時に目が覚める。。「I usually wake up at six.;」</span>
+</div>
+
+</body>
+</html>
+
