@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>切り替えるやつ</title>
+    <link rel="stylesheet" href="css/line.css">
+
+    <script type="text/javascript">
+<!--
+
+  var count = 1001;
+  var countend=20000;
+  var countup = function(){
+    
+    kirikae(count);
+    count++;
+  }
+  var id = setInterval(function(){
+    countup();
+    if(count > countend){　
+      clearInterval(id);　//idをclearIntervalで指定している
+    }}, 15000);
+
+
+function kirikae(x){
+  var i=x;
+  var text='';
+
+  document.getElementById('word'+i).style.display="none";
+  i++;
+  document.getElementById('word'+i).style.display="block";
+  text=document.getElementById('text'+i).innerHTML;
+  copyTextToClipboard(text);
+  
+  //document.getElementById('counter').innerHTML=i;
+  document.title=i;
+  
+}
+
+function copyTextToClipboard(textVal){
+  // テキストエリアを用意する
+  var copyFrom = document.createElement("textarea");
+  // テキストエリアへ値をセット
+  copyFrom.textContent = textVal;
+ 
+  // bodyタグの要素を取得
+  var bodyElm = document.getElementsByTagName("body")[0];
+  // 子要素にテキストエリアを配置
+  bodyElm.appendChild(copyFrom);
+ 
+  // テキストエリアの値を選択
+  copyFrom.select();
+  // コピーコマンド発行
+  var retVal = document.execCommand('copy');
+  // 追加テキストエリアを削除
+  bodyElm.removeChild(copyFrom);
+  // 処理結果を返却
+  return retVal;
+}
+
+
+// -->
+
+</script>
+    
+</head>
+
+<body>
+
+<div id="line">
+<span id="text0" style="display:none;">text0</span>
+<div id="word0" style="display:none;">
+</div>
+
+
+
+
+<div id='word1' style='display:none;'><p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>Unit0 My Spring Vacation</span></p> <p class='prep'><span class='spanrep'></span></p><span id='text1' style='display:none;'>「Unit0 My Spring Vacation,」。;</span></div>
+<div id='word2' style='display:none;'><p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>Hello, everyone. I’m Ando Saki.</span></p> <p class='prep'><span class='spanrep'></span></p><span id='text2' style='display:none;'>「Hello, everyone. I’m Ando Saki.,」。;</span></div>
+<div id='word3' style='display:none;'><p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>I went to Fukui with my family two weeks ago.</span></p> <p class='prep'><span class='spanrep'>2週間前に家族で福井に行ってきました。</span></p><span id='text3' style='display:none;'>「I went to Fukui with my family two weeks ago.,」2週間前に家族で福井に行ってきました。。;</span></div>
+<div id='word4' style='display:none;'><p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>This is a picture of a dinosaur museum.</span></p> <p class='prep'><span class='spanrep'>恐竜博物館の写真です。</span></p><span id='text4' style='display:none;'>「This is a picture of a dinosaur museum.,」恐竜博物館の写真です。。;</span></div>
+<div id='word5' style='display:none;'><p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>You can get a lot of information about dinosaurs and natural history at the museum.</span></p> <p class='prep'><span class='spanrep'>博物館では、恐竜や自然史の情報をたくさん得ることができます。</span></p><span id='text5' style='display:none;'>「You can get a lot of information about dinosaurs and natural history at the museum.,」博物館では、恐竜や自然史の情報をたくさん得ることができます。。;</span></div>
+<div id='word6' style='display:none;'><p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>We enjoyed delicious food, too.</span></p> <p class='prep'><span class='spanrep'>食べ物も美味しくいただきました。</span></p><span id='text6' style='display:none;'>「We enjoyed delicious food, too.,」食べ物も美味しくいただきました。。;</span></div>
+<div id='word7' style='display:none;'><p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>For example, we ate Echizen soba.</span></p> <p class='prep'><span class='spanrep'>例えば、越前そばを食べました。</span></p><span id='text7' style='display:none;'>「For example, we ate Echizen soba.,」例えば、越前そばを食べました。。;</span></div>
+<div id='word8' style='display:none;'><p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>We had a good time.</span></p> <p class='prep'><span class='spanrep'>楽しい時間を過ごすことができました。</span></p><span id='text8' style='display:none;'>「We had a good time.,」楽しい時間を過ごすことができました。。;</span></div>
+<div id='word9' style='display:none;'><p class='pokuru'><img src='img/icon.jpg' alt='' class='img-icon'><span class='spanokuru'>Thank you.</span></p> <p class='prep'><span class='spanrep'>ありがとうございました。</span></p><span id='text9' style='display:none;'>「Thank you.,」ありがとうございました。。;</span></div>
+
+
+
+
+
+</div>
+</body>
+</html>
+
