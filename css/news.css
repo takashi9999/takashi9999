@@ -19,8 +19,6 @@ body {
 }
 
 .pokuru {
-    clear: both;
-    background-size: 40px auto;
     font-size:40px;
 }
 
@@ -35,16 +33,16 @@ body {
 }
 
 .prep {
-    text-align: right;
     font-size:20px;
     
 }
 .spanrep {
     display: inline-block;
     max-width: 70%;
+    background: #85ff49;
+    margin-left: 30px;
     padding: 16px 30px;
     vertical-align: top;
-    background: #85ff49;
     border-radius: 40px;
-    text-align: left;
+
 }
