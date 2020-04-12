@@ -24,7 +24,7 @@ body {
 
 .spanokuru {
     display: inline-block;
-    margin-left: 30px;
+    margin-left: 15px;
     padding: 16px 30px;
     vertical-align: top;
     background: #fff;
@@ -38,7 +38,7 @@ body {
 .spanrep {
     display: inline-block;
     background: #85ff49;
-    margin-left: 30px;
+    margin-left: 15px;
     padding: 16px 30px;
     vertical-align: top;
     border-radius: 40px;
